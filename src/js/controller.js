@@ -127,6 +127,10 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
+const newFeature = function () {
+  console.log('A new feature!');
+};
+
 // Subscriber ( part of the publisher/ subscriber pattern - publisher is in the view)
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
@@ -136,5 +140,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
+  newFeature();
 };
 init();
